@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskMaster - Configuración</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body class="fade-soft">
+
+    <div id="header"></div>
+    <div id="sidebar"></div>
+
+    <div class="sidebar-toggle-btn">☰</div>
+
+    <main class="content-premium fade-in">
+
+        <div class="mb-4">
+            <h2 class="section-title">⚙️ Configuración</h2>
+            <p class="section-subtitle">Personaliza tu experiencia en TaskMaster</p>
+        </div>
+
+        <section class="config-card">
+
+            <div class="config-item">
+                <h5>Tema</h5>
+                <select id="configTema" class="form-select">
+                    <option value="dark">Oscuro</option>
+                    <option value="light">Claro</option>
+                </select>
+            </div>
+
+            <div class="config-item">
+                <h5>Color de acento</h5>
+                <div class="config-colores">
+                    <div class="color-opcion" data-color="#8b5cf6" style="background:#8b5cf6;"></div>
+                    <div class="color-opcion" data-color="#0ea5e9" style="background:#0ea5e9;"></div>
+                    <div class="color-opcion" data-color="#10b981" style="background:#10b981;"></div>
+                    <div class="color-opcion" data-color="#f59e0b" style="background:#f59e0b;"></div>
+                    <div class="color-opcion" data-color="#ef4444" style="background:#ef4444;"></div>
+                </div>
+            </div>
+
+            <div class="config-item">
+                <h5>Tamaño de fuente</h5>
+                <select id="configFuente" class="form-select">
+                    <option value="normal">Normal</option>
+                    <option value="grande">Grande</option>
+                    <option value="xl">Extra grande</option>
+                </select>
+            </div>
+
+            <div class="config-item">
+                <h5>Animaciones</h5>
+                <select id="configAnimaciones" class="form-select">
+                    <option value="on">Activadas</option>
+                    <option value="off">Desactivadas</option>
+                </select>
+            </div>
+
+            <div class="config-item">
+                <h5>Restablecer datos</h5>
+                <button class="btn-premium btn-danger" id="btnResetTodo">Restablecer todo</button>
+            </div>
+
+        </section>
+
+    </main>
+
+    <div id="panelNotificaciones">
+        <h6 class="section-title">Notificaciones</h6>
+        <div id="panelNotificacionesLista"></div>
+        <button class="btn-premium mt-2 pulse-glow" onclick="window.location.href='notificaciones.html'">
+            Ver todas
+        </button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/componentLoader.js"></script>
+    <script src="js/notificationsGlobal.js"></script>
+    <script src="js/globalUser.js"></script>
+    <script src="js/configuracion.js"></script>
+    <script src="js/auth.js"></script>
+
+    <div id="toastContainer" class="toast-container"></div>
+
+</body>
+</html>

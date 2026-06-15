@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskMaster - Notificaciones</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/notificaciones.css">
+</head>
+
+<body>
+
+    <div id="header"></div>
+    <div id="sidebar"></div>
+
+    <main class="content-premium fade-in">
+
+        <div class="mb-4">
+            <h2 class="section-title">🔔 Notificaciones</h2>
+            <p class="section-subtitle">Todas tus alertas importantes en un solo lugar</p>
+        </div>
+
+        <section class="dashboard-section">
+            <div id="listaNotificacionesPagina"></div>
+        </section>
+
+    </main>
+
+    <!-- Panel flotante -->
+    <div id="panelNotificaciones">
+        <h6 class="section-title">Notificaciones</h6>
+        <div id="panelNotificacionesLista"></div>
+        <button class="btn-premium mt-2 btn-glow" onclick="window.location.href='notificaciones.html'">
+            Ver todas
+        </button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/componentLoader.js"></script>
+    <script src="js/notificationsGlobal.js"></script>
+    <script src="js/notificaciones.js"></script>
+    <script src="js/globalUser.js"></script>
+    <script src="js/perfil.js"></script>
+    <script src="js/configuracion.js"></script>
+
+    <div id="toastContainer" class="toast-container"></div>
+
+</body>
+</html>

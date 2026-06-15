@@ -1,0 +1,81 @@
+
+body {
+    background: transparent !important; 
+}
+
+.background-overlay {
+    background: url("../img/fondo-t.jpg") no-repeat center center/cover;
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    filter: brightness(0.35);
+    backdrop-filter: blur(4px);
+
+    z-index: 0;
+}
+
+
+
+.auth-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+}
+
+.login-card,
+.auth-card {
+    width: 380px;
+    padding: 35px;
+    border-radius: 18px;
+}
+
+
+.theme-btn-header {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid var(--border-soft);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.theme-btn-header:hover {
+    background: rgba(139, 92, 246, 0.25);
+    transform: scale(1.08);
+}
+
+
+.input-premium {
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid var(--border-soft);
+    color: var(--text-main) !important;
+}
+
+body.light-mode .input-premium {
+    background: rgba(255, 255, 255, 0.85) !important;
+    color: #000 !important;
+}
+
+
+.subtitle {
+    color: var(--text-sub);
+    font-size: 0.9rem;
+}
+
+body {
+    background: transparent !important;
+    position: relative;
+    z-index: 1;
+}
+
