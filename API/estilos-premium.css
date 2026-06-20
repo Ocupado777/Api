@@ -1,0 +1,124 @@
+/* Fondo y tipografía */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  transition: background 0.6s ease, color 0.6s ease;
+}
+
+/* Modo oscuro */
+.modo-oscuro {
+  background: linear-gradient(135deg, #0b0a1f 0%, #1d0f3a 100%);
+  color: #ffffff;
+}
+
+/* Modo claro */
+.modo-claro {
+  background: linear-gradient(135deg, #f5f7fa 0%, #dfe6e9 100%);
+  color: #2d3436;
+}
+
+.titulo-premium {
+  color: #d4af37;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 0 0 20px rgba(212, 175, 55, 0.8);
+  transition: color 0.6s ease, text-shadow 0.6s ease;
+}
+
+.premium-card {
+  background: #1a1636;
+  border: 2px solid #6c5ce7;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.6s ease;
+  animation: fadeIn 0.6s ease forwards;
+}
+
+.premium-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.6);
+  border-color: #d4af37;
+}
+
+.card-header {
+  background: #2d1b4e;
+  color: #d4af37;
+  font-size: 1.3rem;
+  text-align: center;
+  border-bottom: 2px solid #6c5ce7;
+  padding: 12px;
+}
+
+.card-img-top {
+  filter: brightness(0.9);
+  transition: filter 0.3s ease;
+}
+
+.premium-card:hover .card-img-top {
+  filter: brightness(1.1);
+}
+
+.card-body {
+  background: #1a1636;
+  color: #ffffff;
+  padding: 15px;
+}
+
+.card-body p {
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #a29bfe;
+  border-bottom: 1px dashed #3d2a5f;
+  padding-bottom: 4px;
+}
+
+.card-body span {
+  float: right;
+  color: #d4af37;
+  font-weight: bold;
+}
+
+/* Animación de aparición */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: aparecer 0.6s forwards;
+}
+
+@keyframes aparecer {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Loader estilo portal */
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.portal {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #6c5ce7 20%, #d4af37 60%, #0b0a1f 100%);
+  animation: spinPortal 2s linear infinite;
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.8), 0 0 60px rgba(108, 92, 231, 0.6);
+}
+
+.loader-text {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #d4af37;
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.8);
+}
+
+@keyframes spinPortal {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
